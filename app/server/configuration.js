@@ -33,7 +33,6 @@ app.use('/', express.static(__dirname + '/../client'));
 
 // handle chrome extension script
 app.use('/chrome', express.static(__dirname+ '/../chrome'));
-
 // set the view rendering to generate from the views directory
 app.set('views', __dirname + '/views');
 // set the view engine to use jade
