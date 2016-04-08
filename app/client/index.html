@@ -1,66 +1,24 @@
-<!DOCTYPE html>
-<html>
-<!--
-  This is a temporary file to act as a placeholder until the main app page is created
--->
+<!doctype html>
+<html ng-app="TabApp">
 <head>
-  <title>Keeping Tabs Home Page</title>
+  <title>Keeping Tabs User Portal</title>
 </head>
-<body>
-  <h1>Keeping Tabs: Chrome Extension</h1>
-  <p><em>Just a temporary file for now</em></p>
-<script src="lib/jquery-v1.11.1.js"></script>
-<script src="lib/angular-v1.2.22.js"></script>
-<script src="lib/angular-route-v1.2.22.js"></script>
-<script>
-  //////////////////////////////////////////////////////
-  //**************************************************//
-  // DO NOT DELETE. LETS MOVE THIS TO TESTING SUITE   //
-  //**************************************************//
-  //////////////////////////////////////////////////////
-  
-  // basic tests for server 
 
-  var makePost = function (urls) {
-    // expects urls to be an array
-    return new Promise (function (resolve, reject) {
-      $.ajax({
-        type: "POST",
-        url: '/links',
-        data: {urls: urls},
-        success: resolve
-      })
-      .fail(reject);
-    });
-  };
-
-  /*
-  // make post example
-  makePost(['https://www.google.com', 'https://www.amazon.com'])
-    .then(function(){alert('success')})
-  .catch(function(){alert('fail')})
-  */
-
-  var makeGet = function () {
-    // expects urls to be an array
-    return new Promise (function (resolve, reject) {
-      $.ajax({
-        type: "GET",
-        url: '/links',
-        success: resolve
-      })
-      .fail(reject);
-    });
-  };
-
-  /*
-  // make get example
-  makeGet()
-    .then(function(data){alert('success'); console.log(data);})
-  .catch(function(error){alert('fail'); console.log(error);})
-  */
+<body ng-controller="UrlsCtrl">
+  <div class="profile">
+    
+  </div>
+  <h1>Keeping Tabs: A list of your tabs</h1>
+  <h3>Hello {{user}}
+  <h4>{{url}}</h4>
+  <p><em></em></p>
 
 
-</script>
+  <!-- Vendor Libraries -->
+  <script src="lib/jquery-v1.11.1.js"></script>
+  <script src="lib/angular-v1.2.22.js"></script>
+  <script src="lib/angular-route-v1.2.22.js"></script>
+  <!-- Application Files -->
+  <script src="/js/app.js"></script>
 </body>
 </html>
